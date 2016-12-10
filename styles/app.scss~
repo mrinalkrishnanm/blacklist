@@ -1,0 +1,80 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+@import "partials/sidebar.sass";
+@import "partials/searchcode.sass";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial';
+  height: 100%;
+  width: 100%
+}
+
+html {
+  height: 100%;
+}
+
+.wrapper  {
+  height: 100%;
+  width: 100%;
+}
+
+.register{ 
+	@include span-columns(5.5);
+	@include shift(3.25);
+	background-color: rgba(255,255,255,0.6);
+  border-radius: 6px;
+  position: fixed;
+  padding: 15px;
+  margin-top: 13%;
+  z-index: 9999;
+  box-shadow:1px 1px 1px 1px grey;
+  filter: alpha(opacity=60); 
+}
+
+.register-bg{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("http://pre13.deviantart.net/7f59/th/pre/i/2010/062/1/4/panoramic_landscape_by_compot_stock.jpg");
+   -webkit-filter: blur(2px);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.login{
+  @include span-columns(5.5);
+  @include shift(3.25);
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 6px;
+  position: fixed;
+  padding: 15px;
+  margin-top: 18%;
+  z-index: 9999;
+  box-shadow:1px 1px 1px 1px grey;
+  filter: alpha(opacity=60); 
+}
+
+.login-bg{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("http://pre13.deviantart.net/7f59/th/pre/i/2010/062/1/4/panoramic_landscape_by_compot_stock.jpg");
+  -webkit-filter: blur(2px);
+  -webkit-transform: translate3d(0, 0, 0);
+}

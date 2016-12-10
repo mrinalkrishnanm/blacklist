@@ -1,0 +1,99 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+@import "partials/term.sass";
+@import "partials/searchcode.sass";
+@import "react-select/default.scss";
+@import "partials/coderesult.sass";
+@import "partials/createcode.sass";
+@import "partials/filterbar.sass";
+@import "partials/homepage.sass";
+@import "partials/codedesc.sass";
+
+input:focus {
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+}
+
+
+body {
+  font-family: 'Helvetica', 'Arial';
+  height: 100%;
+  width: 100%;
+  color: #444;
+}
+
+.dashboard{
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+
+.wrapper  {
+  height: 100%;
+  @include span-columns(12 of 12);
+  width: 100%;
+}
+
+
+.container-box{
+  @include span-columns(4);
+  @include shift(4);
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 6px;
+  position: fixed;
+  padding: 15px;
+  margin-top: 10%;
+
+  button {
+    background-color: #db4860;
+    @include span-columns(12);
+  }
+
+  h3 {
+    @include span-columns(12);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 200;
+    color: white;
+  }
+}
+
+.container-bg{
+  height: 100%;
+  @include span-columns(12)
+  background: #FBD3E9;
+  background: -webkit-linear-gradient(to top,#114357 , #F29492);
+  background: linear-gradient(to bottom, #114357 , #F29492);
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  img {
+    @include span-columns(1);
+    @include shift(5.5);
+    margin-top: 10%;
+  }
+
+  h1 {
+    @include span-columns(12);
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 200;
+  }
+}

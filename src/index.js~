@@ -1,0 +1,31 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { Router, Route, IndexRoute, hashHistory, useRouterHistory } from 'react-router';
+var createHashHistory = require('../node_modules/react-router/node_modules/history').createHashHistory;
+import UserRegister from './components/UserRegister.jsx';
+import UserLogin from './components/UserLogin.jsx';
+import UserDashBoard from './components/UserDashBoard.jsx';
+import SearchCode from './components/SearchCode.jsx';
+import CreateCode from './components/CreateCode.jsx';
+import CodeDesc from './components/CodeDesc.jsx' ;
+import HomePage from './components/HomePage.jsx';
+import Term from './components/Term.jsx';
+
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
+
+
+
+var app = document.getElementById('root')
+ReactDOM.render(
+    <Router history={appHistory} >
+      <Route path="/" component={App} />
+      <Route name="register" path="/register" handler={ UserRegister } />
+      <Route name="login" path="login" handler={ UserLogin } />
+      <Route name="dashboard" path="dashboard" handler={ UserDashBoard } />
+      <Route name="searchcode" path="search" handler={ SearchCode } />
+      <Route name="createcode" path="create" handler={ CreateCode } />
+      <Route name="codedesc" path="codes/:id" handler={ CodeDesc } />
+      <Route name="term" path="term" handler={ Term } />
+    </Router>
+,app);
